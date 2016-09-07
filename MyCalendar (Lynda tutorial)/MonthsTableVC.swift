@@ -11,6 +11,7 @@ import UIKit
 
 class MonthsTableVC : UITableViewController{
     
+    let months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     
     //How many sections?
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -19,15 +20,22 @@ class MonthsTableVC : UITableViewController{
 
     //How many rows in each section?
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return months.count
     }
     
     //Return cell for display
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+
+        
         let cell = tableView.dequeueReusableCellWithIdentifier("Basic")!
         
-        cell.textLabel?.text = "Test"
+        
+        //This method returns an optional value. But, I'm confident that I've set everything up correctly,
+        // so I'm going to use an ! to implicitly unwrap the optional value. In your app, you may want to
+        //adopt a more robust solution for checking to make sure that you got a cell back here.
+        
+        cell.textLabel?.text = months[indexPath.row]
         
         return cell
         
