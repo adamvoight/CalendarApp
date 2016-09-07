@@ -12,6 +12,10 @@
 		7C684E661D805DD2001868EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C684E641D805DD2001868EB /* Main.storyboard */; };
 		7C684E681D805DD2001868EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C684E671D805DD2001868EB /* Assets.xcassets */; };
 		7C684E6B1D805DD2001868EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C684E691D805DD2001868EB /* LaunchScreen.storyboard */; };
+		7C684E731D8065EE001868EB /* MonthsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C684E721D8065EE001868EB /* MonthsTableVC.swift */; };
+		7C684E7D1D8066DC001868EB /* DaysTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C684E7C1D8066DC001868EB /* DaysTableVC.swift */; };
+		7C684E7F1D8066E8001868EB /* EventsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C684E7E1D8066E8001868EB /* EventsTableVC.swift */; };
+		7C684E811D8066FE001868EB /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C684E801D8066FE001868EB /* EventVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		7C684E671D805DD2001868EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C684E6A1D805DD2001868EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C684E6C1D805DD2001868EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C684E721D8065EE001868EB /* MonthsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthsTableVC.swift; sourceTree = "<group>"; };
+		7C684E7C1D8066DC001868EB /* DaysTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysTableVC.swift; sourceTree = "<group>"; };
+		7C684E7E1D8066E8001868EB /* EventsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableVC.swift; sourceTree = "<group>"; };
+		7C684E801D8066FE001868EB /* EventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				7C684E671D805DD2001868EB /* Assets.xcassets */,
 				7C684E691D805DD2001868EB /* LaunchScreen.storyboard */,
 				7C684E6C1D805DD2001868EB /* Info.plist */,
+				7C684E721D8065EE001868EB /* MonthsTableVC.swift */,
+				7C684E7C1D8066DC001868EB /* DaysTableVC.swift */,
+				7C684E7E1D8066E8001868EB /* EventsTableVC.swift */,
+				7C684E801D8066FE001868EB /* EventVC.swift */,
 			);
 			path = "MyCalendar (Lynda tutorial)";
 			sourceTree = "<group>";
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C684E7F1D8066E8001868EB /* EventsTableVC.swift in Sources */,
 				7C684E631D805DD2001868EB /* ViewController.swift in Sources */,
 				7C684E611D805DD2001868EB /* AppDelegate.swift in Sources */,
+				7C684E811D8066FE001868EB /* EventVC.swift in Sources */,
+				7C684E7D1D8066DC001868EB /* DaysTableVC.swift in Sources */,
+				7C684E731D8065EE001868EB /* MonthsTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

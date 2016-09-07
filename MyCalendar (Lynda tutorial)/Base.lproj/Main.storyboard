@@ -8,26 +8,18 @@
         <!--Months-->
         <scene sceneID="KH2-gp-7xt">
             <objects>
-                <tableViewController title="Months" id="bgR-yu-gep" sceneMemberID="viewController">
+                <tableViewController title="Months" id="bgR-yu-gep" customClass="MonthsTableVC" customModule="MyCalendar__Lynda_tutorial_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4Fz-hN-pqg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hLu-Mk-N2T">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Basic" id="hLu-Mk-N2T">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hLu-Mk-N2T" id="Sge-Bq-HCq">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tf8-ru-lqW">
-                                            <rect key="frame" x="8" y="11" width="91" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="fQ4-SO-QI0" kind="show" id="xT1-lx-LIH"/>
@@ -48,13 +40,13 @@
         <!--Days-->
         <scene sceneID="hao-KL-ZIF">
             <objects>
-                <tableViewController title="Days" id="fQ4-SO-QI0" sceneMemberID="viewController">
+                <tableViewController title="Days" id="fQ4-SO-QI0" customClass="DaysTableVC" customModule="MyCalendar__Lynda_tutorial_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="XBs-L6-gES">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Udi-Ye-PcO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Basic" id="Udi-Ye-PcO">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Udi-Ye-PcO" id="sFt-wc-YyX">
@@ -79,7 +71,7 @@
         <!--Event-->
         <scene sceneID="Eex-SK-2DJ">
             <objects>
-                <viewController title="Event" id="RAa-Iq-Fef" sceneMemberID="viewController">
+                <viewController title="Event" id="RAa-Iq-Fef" customClass="EventVC" customModule="MyCalendar__Lynda_tutorial_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zkn-WF-hmF"/>
                         <viewControllerLayoutGuide type="bottom" id="2Qq-Pf-9cF"/>
@@ -97,13 +89,13 @@
         <!--Events-->
         <scene sceneID="E8Z-3w-8fR">
             <objects>
-                <tableViewController title="Events" id="vLL-6Z-IRh" sceneMemberID="viewController">
+                <tableViewController title="Events" id="vLL-6Z-IRh" customClass="EventsTableVC" customModule="MyCalendar__Lynda_tutorial_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="vdp-SE-LTb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="DU0-Yn-YbH">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Basic" id="DU0-Yn-YbH">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DU0-Yn-YbH" id="JFZ-hZ-0l0">
