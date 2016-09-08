@@ -16,6 +16,7 @@
 		7C684E7D1D8066DC001868EB /* DaysTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C684E7C1D8066DC001868EB /* DaysTableVC.swift */; };
 		7C684E7F1D8066E8001868EB /* EventsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C684E7E1D8066E8001868EB /* EventsTableVC.swift */; };
 		7C684E811D8066FE001868EB /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C684E801D8066FE001868EB /* EventVC.swift */; };
+		7C684E831D80ABA9001868EB /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C684E821D80ABA9001868EB /* Event.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7C684E7C1D8066DC001868EB /* DaysTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DaysTableVC.swift; sourceTree = "<group>"; };
 		7C684E7E1D8066E8001868EB /* EventsTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableVC.swift; sourceTree = "<group>"; };
 		7C684E801D8066FE001868EB /* EventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
+		7C684E821D80ABA9001868EB /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				7C684E7C1D8066DC001868EB /* DaysTableVC.swift */,
 				7C684E7E1D8066E8001868EB /* EventsTableVC.swift */,
 				7C684E801D8066FE001868EB /* EventVC.swift */,
+				7C684E821D80ABA9001868EB /* Event.swift */,
 			);
 			path = "MyCalendar (Lynda tutorial)";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				7C684E611D805DD2001868EB /* AppDelegate.swift in Sources */,
 				7C684E811D8066FE001868EB /* EventVC.swift in Sources */,
 				7C684E7D1D8066DC001868EB /* DaysTableVC.swift in Sources */,
+				7C684E831D80ABA9001868EB /* Event.swift in Sources */,
 				7C684E731D8065EE001868EB /* MonthsTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
