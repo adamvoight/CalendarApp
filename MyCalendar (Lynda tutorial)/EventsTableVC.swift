@@ -16,7 +16,7 @@ class EventsTableVC : UITableViewController{
     //class Event ()
     
     
-    let events = [Event]()
+    var events : [String] = Array()
     
     //events.append("Work", 2)
     //events.append("Work")
@@ -46,7 +46,7 @@ class EventsTableVC : UITableViewController{
         // so I'm going to use an ! to implicitly unwrap the optional value. In your app, you may want to
         //adopt a more robust solution for checking to make sure that you got a cell back here.
         
-        cell.textLabel?.text = "\(indexPath.row + 1)"
+        cell.textLabel?.text = events[indexPath.row]
         
         return cell
     }

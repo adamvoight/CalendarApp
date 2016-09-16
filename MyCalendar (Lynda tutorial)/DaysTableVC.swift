@@ -13,6 +13,8 @@ class DaysTableVC : UITableViewController{
     //How many sections?
     
     
+    var monthNumber = -1
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

@@ -22,7 +22,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="fQ4-SO-QI0" kind="show" id="xT1-lx-LIH"/>
+                                    <segue destination="fQ4-SO-QI0" kind="show" identifier="MonthDaySegue" id="xT1-lx-LIH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -103,7 +103,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="RAa-Iq-Fef" kind="show" id="l3C-bu-Ebe"/>
+                                    <segue destination="RAa-Iq-Fef" kind="show" identifier="EventsEventSegue" id="l3C-bu-Ebe"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

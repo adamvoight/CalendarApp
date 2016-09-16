@@ -41,5 +41,16 @@ class MonthsTableVC : UITableViewController{
         return cell
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "MonthDaySegue"){
+            let selectedRow = tableView.indexPathForSelectedRow?.row
+            
+            if let dest = segue.destinationViewController as? DaysTableVC{
+                dest.title = months[selectedRow!]
+                dest.monthNumber = selectedRow! + 1
+            }
+        }
+    }
                                 
 }
