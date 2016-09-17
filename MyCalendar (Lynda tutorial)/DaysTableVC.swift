@@ -14,6 +14,7 @@ class DaysTableVC : UITableViewController{
     
     
     var monthNumber = -1
+    var dayNumber = -1
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -41,6 +42,18 @@ class DaysTableVC : UITableViewController{
         return cell
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "DayEventsSegue"){
+            let selectedRow = tableView.indexPathForSelectedRow?.row
+            
+            if let dest = segue.destinationViewController as? EventsTableVC{
+                dest.title = "\(selectedRow! + 1)"
+                dest.monthNumber = monthNumber
+            }
+        }
+    }
+
 
     
     

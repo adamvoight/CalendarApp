@@ -10,21 +10,25 @@ import Foundation
 import UIKit
 
 class EventsTableVC : UITableViewController{
-    //How many sections?
     
     
-    //class Event ()
     
-    
+    var monthNumber : Int = -1
+    var dayNumber : Int = -1
     var events : [String] = Array()
     
-    //events.append("Work", 2)
-    //events.append("Work")
+    override func viewDidLoad() {
+        print("\(monthNumber)-\(dayNumber)")
+    }
     
-    //["Work"] = 12
-
+    @IBAction func addButtonPressed(sender : UIBarButtonItem){
+        let newEvent = "Test Event \(events.count + 1)"
+        events.append(newEvent)
+        tableView.reloadData()
+        
+    }
     
-    
+    //How many sections?
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
