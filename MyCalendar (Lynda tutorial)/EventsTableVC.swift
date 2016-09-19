@@ -28,6 +28,24 @@ class EventsTableVC : UITableViewController{
         
     }
     
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(
+        tableView: UITableView,
+        commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+        forRowAtIndexPath indexPath: NSIndexPath) {
+        
+            if (editingStyle == UITableViewCellEditingStyle.Delete){
+                self.events.removeAtIndex(indexPath.row)
+                
+                let sections = NSIndexSet(index: 0)
+                tableView.reloadSections(sections, withRowAnimation: .Fade)
+                
+            }
+    }
+    
     //How many sections?
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -41,19 +59,23 @@ class EventsTableVC : UITableViewController{
     //Return cell for display
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("Basic")!
-        
-        
-        //This method returns an optional value. But, I'm confident that I've set everything up correctly,
-        // so I'm going to use an ! to implicitly unwrap the optional value. In your app, you may want to
-        //adopt a more robust solution for checking to make sure that you got a cell back here.
-        
-        cell.textLabel?.text = events[indexPath.row]
+                cell.textLabel?.text = events[indexPath.row]
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "EventsEventSegue"){
+            let selectedRow = tableView.indexPathForSelectedRow?.row
+            
+            if let dest = segue.destinationViewController as? EventVC{
+                dest.title = "\(selectedRow! + 1)"
+                //dest.eventNumber = eventNumber
+            }
+        }
+    }
+
 }
 
 

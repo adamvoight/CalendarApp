@@ -27,14 +27,9 @@ class MonthsTableVC : UITableViewController{
     //Return cell for display
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("Basic")!
         
-        
-        //This method returns an optional value. But, I'm confident that I've set everything up correctly,
-        // so I'm going to use an ! to implicitly unwrap the optional value. In your app, you may want to
-        //adopt a more robust solution for checking to make sure that you got a cell back here.
+        //*This method returns an optional value. But, I'm confident that I've set everything up correctly, so I'm going to use an ! to implicitly unwrap the optional value. In your app, you may want to adopt a more robust solution for checking to make sure that you got a cell back here. *//
         
         cell.textLabel?.text = months[indexPath.row]
         

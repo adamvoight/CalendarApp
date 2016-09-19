@@ -54,7 +54,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="vLL-6Z-IRh" kind="show" id="K9s-7m-lCB"/>
+                                    <segue destination="vLL-6Z-IRh" kind="show" identifier="DayEventSegue" id="K9s-7m-lCB"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
