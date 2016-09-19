@@ -15,7 +15,8 @@ class EventsTableVC : UITableViewController{
     
     var monthNumber : Int = -1
     var dayNumber : Int = -1
-    var events : [String] = Array()
+    //var events : [String] = Array()
+    var events : [AnyObject] = Array() // for loading CalandarEvents
     
     override func viewDidLoad() {
         print("\(monthNumber)-\(dayNumber)")
@@ -23,7 +24,18 @@ class EventsTableVC : UITableViewController{
     
     @IBAction func addButtonPressed(sender : UIBarButtonItem){
         let newEvent = "Test Event \(events.count + 1)"
-        events.append(newEvent)
+        
+        let defaultsKey = "\(monthNumber)-\(dayNumber)"
+        let ce = CalendarEvent(withTitle: newEvent, andDateString: defaultsKey)
+        
+        let encodedCE = NSKeyedArchiver.archivedDataWithRootObject(ce)
+        events.append(encodedCE)
+        
+        NSUserDefaults.standardUserDefaults().setObject(events, forKey: defaultsKey)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        //events.append(newEvent)
         tableView.reloadData()
         
     }
@@ -53,6 +65,14 @@ class EventsTableVC : UITableViewController{
     
     //How many rows in each section?
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let defaultsKey = "\(monthNumber)-\(dayNumber)"
+        
+        let arrayOfEvents = NSUserDefaults.standardUserDefaults().arrayForKey(defaultsKey)
+        
+        if let arrayOfEvents = arrayOfEvents{
+            events = arrayOfEvents
+        }
+        
         return events.count
     }
     
@@ -60,7 +80,12 @@ class EventsTableVC : UITableViewController{
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Basic")!
-                cell.textLabel?.text = events[indexPath.row]
+                //cell.textLabel?.text = events[indexPath.row]
+        
+        if let eventObject = events[indexPath.row] as? NSData{
+            let ce = NSKeyedUnarchiver.unarchiveObjectWithData(eventObject) as! CalendarEvent
+            cell.textLabel?.text = ce.title
+        }
         
         return cell
     }
